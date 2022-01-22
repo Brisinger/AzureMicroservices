@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  ecommerce.api.customers:
+    image: ${DOCKER_REGISTRY-}ecommerceapi
+    build:
+      context: .
+      dockerfile: ECommerce.API.Customers/Dockerfile
+
+  ecommerce.api.orders:
+    image: ${DOCKER_REGISTRY-}ecommerceapi
+    build:
+      context: .
+      dockerfile: ECommerce.API.Orders/Dockerfile
+
+
+  ecommerce.api.products:
+    image: ${DOCKER_REGISTRY-}ecommerceapi
+    build:
+      context: .
+      dockerfile: ECommerce.API.Products/Dockerfile
+
+
+  ecommerce.api.search:
+    image: ${DOCKER_REGISTRY-}ecommerceapi
+    build:
+      context: .
+      dockerfile: ECommerce.API.Search/Dockerfile
+
